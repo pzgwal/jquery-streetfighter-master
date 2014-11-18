@@ -16,6 +16,7 @@ $(document).ready(function() {
       {'left': '300px'},
       500,
       function() {
+        $(this).stop();
         $(this).hide();
         $(this).css('left', '-212px');
       }
@@ -34,14 +35,14 @@ function playHadouken () {
 }
 
  $(document).keydown(function() {
- 	{if (keyCode = 88) {
- 		$('.ryu').hide();
+ 	if (keyCode = 88) {
+ 		$('.ryu-ready').hide();
       $('.ryu-cool').show();
  	}
  })
  	.keyup(function() {
  	 if (keyup = 88) {
- 		$('.ryu').hide();
-       $('.ryu-still').show();
+ 		$('.ryu-cool').hide();
+       $('.ryu-ready').show();
  		}
  });
